@@ -1,0 +1,13 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#	https://github.com/CodeNameTwister/GDWatermark-Example
+#
+#	author:	"Twister"
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+Main project 
+res://watermark/HiderMessage.tscn
+
+Quick Examples
+res://samples/mesh/example.tscn
+res://samples/image/example.tscn
+res://samples/audio/example.tscn

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cc1jwod364y7b"]
+
+[ext_resource type="PackedScene" uid="uid://c6pthummd8dy5" path="res://watermark/HiderMessage.tscn" id="1_epaa1"]
+
+[node name="Example" type="Control" unique_id=1111016432]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WatermarkMessage" parent="." unique_id=100937177 instance=ExtResource("1_epaa1")]
+layout_mode = 1
+
+[node name="LineEdit" parent="WatermarkMessage/GridContainer/Hide Message/Container/VBoxContainer2/HBoxContainer" parent_id_path=PackedInt32Array(100937177, 1902412405) index="0" unique_id=894066971]
+text = "res://samples/image/images.png"
+
+[node name="TextEdit" parent="WatermarkMessage/GridContainer/Hide Message/Container/VBoxContainer2" parent_id_path=PackedInt32Array(100937177, 1454437838) index="2" unique_id=503165013]
+text = "My custom message in a image"
+
+[node name="LineEdit" parent="WatermarkMessage/GridContainer/Hide Message/Container/VBoxContainer2/HBoxContainer2" parent_id_path=PackedInt32Array(100937177, 1803366404) index="0" unique_id=1972627168]
+text = "user://my_new_image.png"
+
+[node name="LineEdit" parent="WatermarkMessage/GridContainer/Show Message/Container/VBoxContainer2/HBoxContainer" parent_id_path=PackedInt32Array(100937177, 1520196307) index="0" unique_id=2020077308]
+text = "user://my_new_image.png"
+
+[editable path="WatermarkMessage"]

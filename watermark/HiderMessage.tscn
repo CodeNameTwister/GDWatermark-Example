@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://c6pthummd8dy5"]
+
+[ext_resource type="Script" uid="uid://so8axd1bf3lb" path="res://watermark/GUI/search.gd" id="1_44w7d"]
+[ext_resource type="Script" uid="uid://btefuj5nalc40" path="res://watermark/GUI/savepath.gd" id="2_dyd2u"]
+[ext_resource type="Script" uid="uid://i68hyag5opwc" path="res://watermark/GUI/create.gd" id="3_hhjh5"]
+[ext_resource type="Script" uid="uid://c66s4gmtfmubd" path="res://watermark/GUI/show.gd" id="4_180s6"]
+
+[node name="WatermarkMessage" type="MarginContainer" unique_id=100937177]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="GridContainer" type="TabContainer" parent="." unique_id=853137592]
+layout_mode = 2
+current_tab = 0
+
+[node name="Hide Message" type="MarginContainer" parent="GridContainer" unique_id=1214987011]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Container" type="HBoxContainer" parent="GridContainer/Hide Message" unique_id=788251408]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer/Hide Message/Container" unique_id=1454437838]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="GridContainer/Hide Message/Container/VBoxContainer2" unique_id=1626236817]
+layout_mode = 2
+text = "Hide Message"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/Hide Message/Container/VBoxContainer2" unique_id=1902412405]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="GridContainer/Hide Message/Container/VBoxContainer2/HBoxContainer" unique_id=894066971]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "You file path"
+
+[node name="Button" type="Button" parent="GridContainer/Hide Message/Container/VBoxContainer2/HBoxContainer" unique_id=1056763753 node_paths=PackedStringArray("line_edit", "dfile")]
+layout_mode = 2
+text = "Search File"
+script = ExtResource("1_44w7d")
+line_edit = NodePath("../LineEdit")
+dfile = NodePath("../../../../../../FileDialog")
+
+[node name="TextEdit" type="TextEdit" parent="GridContainer/Hide Message/Container/VBoxContainer2" unique_id=503165013]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Insert you custom message"
+
+[node name="Label" type="Label" parent="GridContainer/Hide Message/Container/VBoxContainer2" unique_id=739060641]
+layout_mode = 2
+text = "Save Path"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer/Hide Message/Container/VBoxContainer2" unique_id=1803366404]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="GridContainer/Hide Message/Container/VBoxContainer2/HBoxContainer2" unique_id=1972627168]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Save file path"
+script = ExtResource("2_dyd2u")
+
+[node name="Button" type="Button" parent="GridContainer/Hide Message/Container/VBoxContainer2/HBoxContainer2" unique_id=2048683892 node_paths=PackedStringArray("line_edit", "dfile")]
+layout_mode = 2
+text = "Choose"
+script = ExtResource("1_44w7d")
+line_edit = NodePath("../LineEdit")
+dfile = NodePath("../../../../../../FileDialog")
+save = true
+
+[node name="Button" type="Button" parent="GridContainer/Hide Message/Container/VBoxContainer2" unique_id=814370426 node_paths=PackedStringArray("origin", "target", "area")]
+layout_mode = 2
+text = "Create"
+script = ExtResource("3_hhjh5")
+origin = NodePath("../HBoxContainer/LineEdit")
+target = NodePath("../HBoxContainer2/LineEdit")
+area = NodePath("../TextEdit")
+
+[node name="Show Message" type="MarginContainer" parent="GridContainer" unique_id=530848370]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Container" type="HBoxContainer" parent="GridContainer/Show Message" unique_id=423118419]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer/Show Message/Container" unique_id=943179048]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/Show Message/Container/VBoxContainer2" unique_id=1087708099]
+layout_mode = 2
+text = "Show Message"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/Show Message/Container/VBoxContainer2" unique_id=1520196307]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="GridContainer/Show Message/Container/VBoxContainer2/HBoxContainer" unique_id=2020077308]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "File with the message hided path"
+
+[node name="Button" type="Button" parent="GridContainer/Show Message/Container/VBoxContainer2/HBoxContainer" unique_id=891148818 node_paths=PackedStringArray("line_edit", "dfile")]
+layout_mode = 2
+text = "Search File"
+script = ExtResource("1_44w7d")
+line_edit = NodePath("../LineEdit")
+dfile = NodePath("../../../../../../FileDialog")
+
+[node name="TextEdit" type="TextEdit" parent="GridContainer/Show Message/Container/VBoxContainer2" unique_id=2134572148]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Display the hidde message"
+editable = false
+
+[node name="Button2" type="Button" parent="GridContainer/Show Message/Container/VBoxContainer2" unique_id=1331396 node_paths=PackedStringArray("origin", "area")]
+layout_mode = 2
+text = "Show"
+script = ExtResource("4_180s6")
+origin = NodePath("../HBoxContainer/LineEdit")
+area = NodePath("../TextEdit")
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=737296580]
+title = "Open a File"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.wav", "*.res", "*.tres", "*.")
