@@ -15,3 +15,12 @@ Remember to check the import settings if you are using a resource located inside
 * PNG
 * WAV - 16 PCM
 * ArrayMesh - Resource
+
+## Scenes
+### Main project 
+* res://watermark/HiderMessage.tscn
+
+### Quick Examples
+* res://samples/mesh/example.tscn
+* res://samples/image/example.tscn
+* res://samples/audio/example.tscn
