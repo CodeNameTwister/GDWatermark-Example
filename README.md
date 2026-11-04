@@ -4,6 +4,8 @@ Godot Watermark Example
 # About
 This project contains examples of using steganography in Godot for images, audio, and meshes.
 
+Video about steganography: [Link](https://youtu.be/__Q_aVPtIKQ?si=mUP-tcLisxrehQh6)
+
 # How Work
 You can use the main scene to choose a generic file that allows you to hide or show a message, or you can use the example scenes found in the subfolder within the "Sample" folder.
 
