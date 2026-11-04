@@ -10,8 +10,7 @@ Video about steganography: [Link](https://youtu.be/__Q_aVPtIKQ?si=mUP-tcLisxrehQ
 You can use the main scene to choose a generic file that allows you to hide or show a message, or you can use the example scenes found in the subfolder within the "Sample" folder.
 
 ## Support
-Remember to check the import settings if you are using a resource located within the project.
-Currently support 
+Remember to check the import settings if you are using a resource located inside the project.
 
 * PNG
 * WAV - 16 PCM
